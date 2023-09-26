@@ -1,0 +1,32 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #FFE3E0;
+}
+
+#main-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+p{
+    font-size: 30px;
+    font-weight: bold;
+    
+}
+
+button{
+    background-color: #EC4732;
+    border: 2px solid black;
+    font-weight: bold;
+    width: 150px;
+    height: 30px;
+}
+
+input{
+    border: 2px solid black;
+    height: 30px;
+}
