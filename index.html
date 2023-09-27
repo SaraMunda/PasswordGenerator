@@ -7,9 +7,13 @@
             <P>Password Generator</P>
                 <div id="container">
                     <input id="generatePass" type="text" readonly>
-                    <button id="generateBtn">New Password</button>
+                    <div id="button-container">
+                        <button id="generateBtn">New Password</button>
+                        <button id="specialBtn">Special Characters</button>
+                        <button id="copyBtn" onclick="copyPassword()">Copy</button>
+                    </div>
                 </div>  
-        </div>
+        </div>       
     </body>
     <script src="index.js"></script>
 </html>
