@@ -6,49 +6,65 @@ let generateBtn = document.getElementById("generateBtn")
 let specialBtn = document.getElementById("specialBtn")
 
 function generatedRandomPassword(){
-    password = "";
-    generatePass.value = "";
+    let length = document.getElementById("passwordLength").value
+    if (length >= 1){
+        password = "";
+        generatePass.value = "";
 
-    for (let i = 0; i < 12; i++) {
-        let randomCharset = Math.floor(Math.random() *charset.length)
-        password += charset [randomCharset]
+        for (let i = 0; i < length; i++) {
+            let randomCharset = Math.floor(Math.random() *charset.length)
+            password += charset [randomCharset]
+        }
+            generatePass.value = password
+    } else {
+        alert("La lunghezza della password deve essere almeno 1 carattere.");
     }
-        generatePass.value = password
-}
+}       
+
 generateBtn.addEventListener("click", generatedRandomPassword)
-
-
+   
 
 function generatedSpecialPassword() {
-    password = "";
-    generatePass.value = "";
+    let length = document.getElementById("passwordLength").value;
+    if (length >= 1){
+        password = "";
+        generatePass.value = "";
 
-    for (let i = 0; i < 6; i++) {
-        let randomSpecialCharacters = Math.floor(Math.random() * specialCharacters.length);
-        password += specialCharacters[randomSpecialCharacters];
+        for (let i = 0; i < length; i++) {
+            let randomSpecialCharacters = Math.floor(Math.random() * specialCharacters.length);
+            password += specialCharacters[randomSpecialCharacters];
+        }
+
+        generatePass.value = password
+    } else {
+        alert("La lunghezza della password deve essere almeno 1 carattere.");
     }
-
-    generatePass.value = password ;
 }
 
+
 function generatedCombinedPassword() {
-    password = "";
-    generatePass.value = "";
+    let length = document.getElementById("passwordLength").value;
+    if (length >= 1){
+        password = "";
+        generatePass.value = "";
 
-    let combinedCharset = charset.concat(specialCharacters);
+        let combinedCharset = charset.concat(specialCharacters);
 
-    for (let i = 0; i < 12; i++) {
-        let randomIndex= Math.floor(Math.random() * combinedCharset.length);
-        password += combinedCharset[randomIndex];
-    }
+        for (let i = 0; i < length; i++) {
+            let randomIndex= Math.floor(Math.random() * combinedCharset.length);
+            password += combinedCharset[randomIndex];
+        }
 
-    generatePass.value = password;
+        generatePass.value = password
+    } else {
+        alert("La lunghezza della password deve essere almeno 1 carattere.");
+    } 
 }
 
 specialBtn.addEventListener("click", generatedCombinedPassword)
 
 
-function copyPassword() {
+function copyPassword(){
     let copy = document.getElementById("generatePass")
     copy.select()
     navigator.clipboard.writeText(copy.value)

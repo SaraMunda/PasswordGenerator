@@ -6,25 +6,35 @@ body{
     background-color: #FFE3E0;
 }
 
-p{
+#main-container{
     text-align: center;
     font-size: 30px;
     font-weight: bold;
-}
-
-#container{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+#input-pass-container{
+    text-indent: 50px;
+}
+
+#input-length-container{
+    margin-right: 58px;
+    margin-bottom: 5px;
+    text-indent: 50px;
+}
+
+label{
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 15px;
+    margin-top: 20px;
+}
+
 input{
     border: 2px solid black;
     height: 30px;
-}
-
-#button-container{
-    margin-top: 30px;
 }
 
 button{
@@ -33,6 +43,7 @@ button{
     font-weight: bold;
     width: 150px;
     height: 30px;
+    margin-top: 30px;
 }
 
 button:hover{
