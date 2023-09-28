@@ -17,7 +17,7 @@ function generatedRandomPassword(){
         }
             generatePass.value = password
     } else {
-        alert("La lunghezza della password deve essere almeno 1 carattere.");
+        alert("The length of the password must be at least one character");
     }
 }       
 
@@ -37,7 +37,7 @@ function generatedSpecialPassword() {
 
         generatePass.value = password
     } else {
-        alert("La lunghezza della password deve essere almeno 1 carattere.");
+        alert("The length of the password must be at least one character.");
     }
 }
 
@@ -57,7 +57,7 @@ function generatedCombinedPassword() {
 
         generatePass.value = password
     } else {
-        alert("La lunghezza della password deve essere almeno 1 carattere.");
+        alert("The length of the password must be at least one character");
     } 
 }
 
