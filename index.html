@@ -1,19 +1,22 @@
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale= 1.0">
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
-        <div id="main-container">
-            <P>Password Generator</P> 
-            <div id="input-length-container">
-                <label for = passwordLength>Password length:</label>
-                <input id="passwordLength" type="text">
+        <div class="main-container">
+            <P>Password Generator</P>
+            <div class="input-container">
+                <div class="input-length-container">
+                    <label for = passwordLength>Password length:</label>
+                    <input id="passwordLength" type="text">
+                </div>
+                <div class ="input-pass-container">
+                    <label for = "generatePass">Password:</label>
+                    <input id="generatePass" type="text" readonly>
+                </div>
             </div>
-            <div id ="input-pass-container">
-                <label for = "generatePass">Password:</label>
-                <input id="generatePass" type="text" readonly>
-            </div>
-            <div id="button-container">
+            <div class="button-container">
                 <button id="generateBtn">New Password</button>
                 <button id="specialBtn">Special Characters</button>
                 <button id="copyBtn" onclick="copyPassword()">Copy</button>  

@@ -6,7 +6,7 @@ body{
     background-color: #FFE3E0;
 }
 
-#main-container{
+.main-container{
     text-align: center;
     font-size: 30px;
     font-weight: bold;
@@ -15,37 +15,67 @@ body{
     align-items: center;
 }
 
-#input-pass-container{
-    text-indent: 50px;
-}
-
-#input-length-container{
-    margin-right: 58px;
-    margin-bottom: 5px;
-    text-indent: 50px;
+.input-pass-container{
+    text-indent: 63px;
 }
 
 label{
     font-weight: bold;
-    font-size: 15px;
-    margin-bottom: 15px;
-    margin-top: 20px;
+    font-size: 1rem;
 }
 
 input{
     border: 2px solid black;
-    height: 30px;
+    height: 2rem;
+}
+
+.button-container{
+    margin-top: 30px;
 }
 
 button{
     background-color: #EC4732;
     border: 2px solid black;
     font-weight: bold;
-    width: 150px;
-    height: 30px;
-    margin-top: 30px;
+    width: 10rem;
+    height: 2.5rem;
 }
 
 button:hover{
     background-color:#F38A7C;
+}
+
+@media only screen and (max-width: 600px){
+    .main-container{
+        font-size: 20px;
+    }
+    .input-container{
+        margin-top: 5px;
+    }
+    .input-length-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    .input-pass-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-indent: 5px;
+    }
+    input{
+        width:8rem;
+    }
+    label{
+        margin-bottom: 5px;
+    }
+    .button-container{
+        display: flex;
+        flex-direction: column;
+    } 
+    button{
+        width:8rem;
+        margin-bottom: 20px;
+    }
 }
